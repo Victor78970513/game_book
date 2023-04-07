@@ -18,7 +18,7 @@ class ListGameSlide extends StatefulWidget {
 class _ListGameSlideState extends State<ListGameSlide> {
   @override
   void initState() {
-    WidgetsBinding.instance!.addPostFrameCallback((timeStamp) {
+    WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
       final provider = Provider.of<GameProvider>(context, listen: false);
       if (provider.listSlide.isEmpty) {
         provider.getSlide();
